@@ -1,0 +1,7 @@
+target/
+.spin/
+
+
+# Added by cargo
+
+/target
