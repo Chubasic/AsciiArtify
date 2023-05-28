@@ -1,0 +1,9 @@
+# Uses binary only
+FROM rust:1.67-alpine as builder
+WORKDIR /usr/src/asciiartify
+COPY . .
+RUN cargo install --path .
+
+FROM debian:bullseye-slim
+COPY --from=builder /usr/local/cargo/bin/asciiartify /usr/local/bin/asciiartify
+CMD ["asciiartify"]
