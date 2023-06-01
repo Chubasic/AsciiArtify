@@ -1,4 +1,4 @@
-Certainly! Here's a comparison of Minikube, k3d, and kind in a markdown table format:
+## About
 
 | Feature           | Minikube                                        | k3d                                              | kind                                             |
 | ----------------- | ----------------------------------------------- | ------------------------------------------------ | ------------------------------------------------ |
@@ -11,4 +11,41 @@ Certainly! Here's a comparison of Minikube, k3d, and kind in a markdown table fo
 | Integration       | Seamless integration with kubectl               | Integration with kubectl                         | Seamless integration with kubectl                |
 | Use Cases         | Local development, testing, learning Kubernetes | Local development, lightweight environments      | Local development, testing, production-like env. |
 
-Please note that this table provides a high-level comparison of the features and use cases of each tool. The suitability of each tool depends on specific requirements and preferences for local Kubernetes cluster management.
+## Characteristics
+
+| Feature                     | Minikube                                               | k3d                                                           | kind                                                     |
+| --------------------------- | ------------------------------------------------------ | ------------------------------------------------------------- | -------------------------------------------------------- |
+| Supported Operating Systems | Linux, macOS, Windows                                  | Linux, macOS, Windows                                         | Linux, macOS, Windows                                    |
+| Supported Architectures     | x86, ARM                                               | x86, ARM                                                      | x86, ARM                                                 |
+| Automation Ability          | Supports provisioning and configuration automation     | Supports automation via YAML configuration                    | Supports automation via Kubernetes configuration files   |
+| Monitoring & Controlling    | Limited monitoring and control features                | Limited monitoring and control features                       | Limited monitoring and control features                  |
+| Additional Features         | - Add-ons for extended functionality                   | - Lightweight and fast cluster provisioning                   | - Closer representation of a production-like environment |
+|                             | - Integration with popular tools like Helm and kubectl | - Customizable cluster configurations via Docker-compose YAML | - Easy integration with local container images           |
+|                             | - Dashboard for cluster management and monitoring      | - Multi-node cluster support                                  | - Seamless integration with kubectl                      |
+
+## Pros and Cons
+
+| Technology | Pros                                                     | Cons                                                       |
+| ---------- | -------------------------------------------------------- | ---------------------------------------------------------- |
+| Minikube   | Pros:                                                    | Cons:                                                      |
+|            | - Easy setup and configuration                           | - Limited scalability for larger deployments               |
+|            | - Suitable for local development and testing             | - Requires resources for running a full Kubernetes cluster |
+|            | - Integrates well with popular Kubernetes tools          | - Limited monitoring and control features                  |
+|            | - Supports multiple operating systems and architectures  | - Can be resource-intensive on the host machine            |
+|            |                                                          |                                                            |
+| k3d        | Pros:                                                    | Cons:                                                      |
+|            | - Lightweight and fast cluster provisioning              | - Limited monitoring and control features                  |
+|            | - Easy integration with local container images           | - Limited community support compared to Minikube           |
+|            | - Supports automation via YAML configuration             | - Limited scalability for larger deployments               |
+|            | - Multi-node cluster support                             |                                                            |
+|            | - Fast and easy setup                                    |                                                            |
+|            |                                                          |                                                            |
+| kind       | Pros:                                                    | Cons:                                                      |
+|            | - Closer representation of a production-like environment | - Limited monitoring and control features                  |
+|            | - Easy integration with kubectl                          | - Limited scalability for larger deployments               |
+|            | - Lightweight and fast cluster provisioning              | - Requires Docker installation and resources               |
+|            | - Supports automation via Kubernetes configuration files |                                                            |
+
+## Recommended tool demonstration
+
+    I would recommend to use k3d for PoC
