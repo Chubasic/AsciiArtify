@@ -6,4 +6,5 @@ RUN cargo install --path .
 
 FROM debian:bullseye-slim
 COPY --from=builder /usr/local/cargo/bin/asciiartify /usr/local/bin/asciiartify
+EXPOSE 8080
 CMD ["asciiartify"]
