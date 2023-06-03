@@ -48,4 +48,6 @@
 
 ## Recommended tool demonstration
 
-    I would recommend to use k3d for PoC
+I would recommend to use k3d for PoC
+
+![demo](hello-app.gif)
