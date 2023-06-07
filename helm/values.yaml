@@ -218,7 +218,7 @@ controller:
   service:
     ## @param controller.service.type Argo CD service type
     ##
-    type: NodePort
+    type: ClusterIP
     ## @param controller.service.port Argo CD application controller service port
     ##
     port: 8082
@@ -2047,7 +2047,7 @@ server:
   service:
     ## @param server.service.type Argo CD service type
     ##
-    type: ClusterIP
+    type: NodePort
     ## @param server.service.ports.http HTTP port for the gRPC ingress when enabled
     ## @param server.service.ports.https HTTPS port for the gRPC ingress when enabled
     ##
