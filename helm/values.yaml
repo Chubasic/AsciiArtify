@@ -43,6 +43,9 @@ resources:
     cpu: 100m
     memory: 128Mi
 
+ingress:
+  enabled: flase
+
 autoscaling:
   enabled: true
   minReplicas: 1
