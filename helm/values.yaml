@@ -11,7 +11,7 @@ image:
 
 imagePullSecrets: []
 nameOverride: "hello-app"
-fullnameOverride: "helm-hello-app"
+fullnameOverride: ""
 
 podAnnotations: {}
 
