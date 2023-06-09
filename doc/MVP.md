@@ -1,1 +1,1 @@
-Demo changes
+![argocd](mvp.gif)
