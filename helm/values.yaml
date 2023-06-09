@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: chubasic/asciiartify.git
-  tag: "v0.0.1-bc6b8d5"
+  tag: "v0.0.2-1837d49"
   # Overrides the image tag whose default is the chart appVersion.
 
 imagePullSecrets: []
