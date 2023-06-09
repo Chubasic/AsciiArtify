@@ -1,3 +1,4 @@
+#Get repo name and lowercase
 APP_NAME=$(shell basename $(shell git remote get-url origin) | tr 'A-Z' 'a-z')
 # Registry name
 REGISTRY=chubasic
