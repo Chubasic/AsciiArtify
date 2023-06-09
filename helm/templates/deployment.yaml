@@ -35,18 +35,18 @@ spec:
           ports:
             - containerPort: {{ .Values.service.targetPort }}
               name: http
-          livenessProbe:
-            httpGet:
-              path: /
-              port: {{ .Values.service.port }}
-              initialDelaySeconds: 3
-              periodSeconds: 3
-          readinessProbe:
-            httpGet:
-              path: /
-              port: {{ .Values.service.port }}
-              initialDelaySeconds: 3
-              periodSeconds: 3
+          # livenessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: {{ .Values.service.port }}
+          #     initialDelaySeconds: 3
+          #     periodSeconds: 3
+          # readinessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: {{ .Values.service.port }}
+          #     initialDelaySeconds: 3
+          #     periodSeconds: 3
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
