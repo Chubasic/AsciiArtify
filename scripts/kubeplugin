@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Define command-line arguments
+NAMESPACE=$2
+RESOURCE_TYPE=$1
+
+# Check if RESOURCE_TYPE is "node" or "pod"
+if [[ "$RESOURCE_TYPE" == "node" || "$RESOURCE_TYPE" == "pod" ]]; then
+  # Retrieve resource usage statistics from Kubernetes
+  kubectl top $RESOURCE_TYPE -n $NAMESPACE --no-headers | while read -r line
+  do
+    # Extract CPU and memory usage from the output
+    NAME=$(echo "$line" | awk '{print $1}')
+    CPU=$(echo "$line" | awk '{print $2}')
+    MEMORY=$(echo "$line" | awk '{print $3}')
+
+    # Output the statistics to the console
+    echo "Resource: $RESOURCE_TYPE"
+    echo "Namespace: $NAMESPACE"
+    echo "Name: $NAME"
+    echo "CPU: $CPU"
+    echo "Memory: $MEMORY"
+    echo
+  done
+else
+  echo "Invalid resource type. Supported resource types: node, pod"
+  exit 1
+fi
+
